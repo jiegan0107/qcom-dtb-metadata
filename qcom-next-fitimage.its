@@ -61,6 +61,22 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/hamoa-iot-evk.dtb");
 			type = "flat_dt";
 		};
+		fdt-lemans-evk-camx.dtbo {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/lemans-evk-camx.dtbo");
+			type = "flat_dt";
+		};
+		fdt-monaco-evk-camx.dtbo {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/monaco-evk-camx.dtbo");
+			type = "flat_dt";
+		};
+		fdt-qcs8300-ride-camx.dtbo {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/qcs8300-ride-camx.dtbo");
+			type = "flat_dt";
+		};
+		fdt-sa8775p-ride-camx.dtbo {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/sa8775p-ride-camx.dtbo");
+			type = "flat_dt";
+		};
 	};
 
 	configurations {
@@ -143,6 +159,38 @@
 		conf-20 {
 			compatible = "qcom,hamoav2.1-evk";
 			fdt = "fdt-hamoa-iot-evk.dtb";
+		};
+		conf-21 {
+			compatible = "qcom,qcs9075-iot-camx";
+			fdt = "fdt-lemans-evk.dtb", "fdt-lemans-evk-camx.dtbo";
+		};
+		conf-22 {
+			compatible = "qcom,qcs9075v2-iot-camx";
+			fdt = "fdt-lemans-evk.dtb", "fdt-lemans-evk-camx.dtbo";
+		};
+		conf-23 {
+			compatible = "qcom,qcs8275-iot-camx";
+			fdt = "fdt-monaco-evk.dtb", "fdt-monaco-evk-camx.dtbo";
+		};
+		conf-24 {
+			compatible = "qcom,qcs8300-adp-camx";
+			fdt = "fdt-qcs8300-ride.dtb", "fdt-qcs8300-ride-camx.dtbo";
+		};
+		conf-25 {
+			compatible = "qcom,sa8775p-qam-camx";
+			fdt = "fdt-sa8775p-ride.dtb", "fdt-sa8775p-ride-camx.dtbo";
+		};
+		conf-26 {
+			compatible = "qcom,sa8775pv2-qam";
+			fdt = "fdt-sa8775p-ride.dtb", "fdt-sa8775p-ride-camx.dtbo";
+		};
+		conf-27 {
+			compatible = "qcom,sa8775p-qamr2";
+			fdt = "fdt-sa8775p-ride-r3.dtb", "fdt-sa8775p-ride-camx.dtbo";
+		};
+		conf-28 {
+			compatible = "qcom,sa8775pv2-qamr2";
+			fdt = "fdt-sa8775p-ride-r3.dtb", "fdt-sa8775p-ride-camx.dtbo";
 		};
 	};
 };
